@@ -9,7 +9,7 @@ module.exports = {
     return res.json(posts);
   },
   async store(req, res) {
-    const { author, place, description, hasthtags } = req.body;
+    const { author, place, description, hashtags } = req.body;
     const { filename: image } = req.file;
 
     const [name] = image.split(".");
@@ -25,7 +25,7 @@ module.exports = {
       author,
       place,
       description,
-      hasthtags,
+      hashtags,
       image: filename
     });
 
